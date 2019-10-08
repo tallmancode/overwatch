@@ -29,24 +29,11 @@
             </div>
             <div class="links-wrap">
                 <ul class="side-nav">
-                    <li class="nav-item">
-                        <a href="{{ route('overwatch.dashboard') }}" class="nav-link">
-                            <i class="icon-group-outline"></i>
-                            <span class="title">Dashboard</span>
-                        </a>
-                    </li>
-                    {!! $MyNavBar->asLi() !!}
-                    <li class="nav-item">
-                        <a href="{{ route('overwatch.users') }}" class="nav-link">
-                            <i class="icon-group-outline"></i>
-                            <span class="title">Users</span>
-                        </a>
-                    </li>
+                    {!! $OverWatchNav->asLi() !!}
                     <li class="nav-item">
                         <a href="" class="nav-link">
                             <i class="icon-cog-outline"></i>
                             <span class="title">Settings</span>
-
                         </a>
                     </li>
 

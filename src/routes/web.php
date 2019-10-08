@@ -19,4 +19,12 @@ Route::group(['as' => 'overwatch.', 'middleware' => ['web']], function () {
     });
 });
 
+Menu::make('OverWatchNav', function ($menu) {
+    $dashboard = $menu->add('Dashboard', ['route'  => 'overwatch.dashboard', 'class' => 'nav-item', 'linkClass' => 'nav-link']);
+    $dashboard->link->attr(['class'=>'nav-link']);
+    $dashboard->prepend('<i class="icon-group-outline"></i>');
 
+    $users = $menu->add('Users', ['route'  => 'overwatch.users', 'class' => 'nav-item', 'linkClass' => 'nav-link']);
+    $users->link->attr(['class'=>'nav-link']);
+    $users->prepend('<i class="icon-group-outline"></i>');
+});

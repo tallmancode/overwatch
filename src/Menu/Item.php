@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Temple\OverWatch\Menu;
+namespace Longmancode\OverWatch\Menu;
 
 use Illuminate\Support\Arr;
 use Illuminate\Support\Str;
