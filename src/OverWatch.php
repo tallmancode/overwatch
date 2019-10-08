@@ -1,6 +1,6 @@
 <?php
 
-namespace Longmancode\OverWatch;
+namespace Tallmancode\OverWatch;
 use Illuminate\Database\Eloquent\Collection;
 
 class OverWatch

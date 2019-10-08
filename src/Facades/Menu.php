@@ -1,6 +1,6 @@
 <?php
 
-namespace Longmancode\OverWatch\Facades;
+namespace Tallmancode\OverWatch\Facades;
 
 use Illuminate\Support\Facades\Facade;
 

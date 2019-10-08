@@ -1,9 +1,9 @@
 <?php
 
-namespace Longmancode\OverWatch\Http\Middleware;
+namespace Tallmancode\OverWatch\Http\Middleware;
 
 use Closure;
-use Longmancode\OverWatch\Facades\ OverWatch;
+use Tallmancode\OverWatch\Facades\ OverWatch;
 
 class OverWatchAdminMiddleware
 {

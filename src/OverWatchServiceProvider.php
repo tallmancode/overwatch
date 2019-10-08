@@ -1,13 +1,13 @@
 <?php
 
-namespace Longmancode\OverWatch;
+namespace Tallmancode\OverWatch;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Foundation\AliasLoader;
 use Illuminate\Routing\Router;
-use Longmancode\OverWatch\Http\Middleware\OverWatchAdminMiddleware;
-use Longmancode\OverWatch\Facades\OverWatch as OverWatchFacade;
-use Longmancode\OverWatch\Facades\Menu as MenuFacade;
+use Tallmancode\OverWatch\Http\Middleware\OverWatchAdminMiddleware;
+use Tallmancode\OverWatch\Facades\OverWatch as OverWatchFacade;
+use Tallmancode\OverWatch\Facades\Menu as MenuFacade;
 
 class OverWatchServiceProvider extends ServiceProvider
 {

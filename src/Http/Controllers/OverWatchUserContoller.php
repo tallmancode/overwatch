@@ -1,9 +1,9 @@
 <?php
 
-namespace Longmancode\OverWatch\Http\Controllers;
+namespace Tallmancode\OverWatch\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Longmancode\OverWatch\Models\User;
+use Tallmancode\OverWatch\Models\User;
 
 class OverWatchUserContoller extends Controller
 {

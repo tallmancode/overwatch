@@ -2,7 +2,7 @@
 
 Route::group(['as' => 'overwatch.', 'middleware' => ['web']], function () {
 
-    $namespaceprefix = 'Longmancode\\OverWatch\\Http\\Controllers\\';
+    $namespaceprefix = 'Tallmancode\\OverWatch\\Http\\Controllers\\';
 
     Route::get('login', ['uses' => $namespaceprefix.'OverWatchAuthController@login',     'as' => 'login']);
     Route::post('login', ['uses' => $namespaceprefix.'OverWatchAuthController@postLogin', 'as' => 'postlogin']);

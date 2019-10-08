@@ -6,6 +6,6 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'Longmancode\\OverWatch\\Test\\' => array($baseDir . '/tests'),
-    'Longmancode\\OverWatch\\' => array($baseDir . '/src'),
+    'Tallmancode\\OverWatch\\Test\\' => array($baseDir . '/tests'),
+    'Tallmancode\\OverWatch\\' => array($baseDir . '/src'),
 );

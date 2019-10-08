@@ -1,12 +1,12 @@
 <?php
 
-namespace Longmancode\OverWatch\Http\Controllers;
+namespace Tallmancode\OverWatch\Http\Controllers;
 
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
-use Longmancode\OverWatch\Facades\OverWatch;
+use Tallmancode\OverWatch\Facades\OverWatch;
 
 
 class OverWatchAuthController extends Controller

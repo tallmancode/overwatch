@@ -1,6 +1,6 @@
 <?php
 
-namespace Longmancode\OverWatch\Models;
+namespace Tallmancode\OverWatch\Models;
 
 use Illuminate\Database\Eloquent\Model;
 

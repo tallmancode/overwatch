@@ -9,17 +9,17 @@ class ComposerStaticInitf64539e5024d837afe1147b5aaee81a8
     public static $prefixLengthsPsr4 = array (
         'L' => 
         array (
-            'Longmancode\\OverWatch\\Test\\' => 27,
-            'Longmancode\\OverWatch\\' => 22,
+            'Tallmancode\\OverWatch\\Test\\' => 27,
+            'Tallmancode\\OverWatch\\' => 22,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'Longmancode\\OverWatch\\Test\\' => 
+        'Tallmancode\\OverWatch\\Test\\' => 
         array (
             0 => __DIR__ . '/../..' . '/tests',
         ),
-        'Longmancode\\OverWatch\\' => 
+        'Tallmancode\\OverWatch\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src',
         ),

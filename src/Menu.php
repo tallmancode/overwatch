@@ -1,8 +1,8 @@
 <?php
 
-namespace Longmancode\OverWatch;
-use Longmancode\OverWatch\Menu\Builder;
-use Longmancode\OverWatch\Menu\Collection;
+namespace Tallmancode\OverWatch;
+use Tallmancode\OverWatch\Menu\Builder;
+use Tallmancode\OverWatch\Menu\Collection;
 use Illuminate\Support\Facades\View;
 
 class Menu

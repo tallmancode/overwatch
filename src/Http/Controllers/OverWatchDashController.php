@@ -1,6 +1,6 @@
 <?php
 
-namespace Longmancode\OverWatch\Http\Controllers;
+namespace Tallmancode\OverWatch\Http\Controllers;
 
 use Illuminate\Http\Request;
 

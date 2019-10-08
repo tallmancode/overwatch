@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Longmancode\OverWatch\Menu;
+namespace Tallmancode\OverWatch\Menu;
 use Illuminate\Support\Facades\View;
 
 class Link

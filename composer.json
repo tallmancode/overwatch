@@ -1,5 +1,5 @@
 {
-    "name": "longmancode/overwatch",
+    "name": "tallmancode/overwatch",
     "description": "A dashboard for all things Temple",
     "license": "MIT",
     "authors": [
@@ -17,18 +17,18 @@
     },
     "autoload": {
         "psr-4": {
-            "Longmancode\\OverWatch\\": "src/"
+            "Tallmancode\\OverWatch\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Longmancode\\OverWatch\\Test\\": "tests/"
+            "Tallmancode\\OverWatch\\Test\\": "tests/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Longmancode\\OverWatch\\OverWatchServiceProvider"
+                "Tallmancode\\OverWatch\\OverWatchServiceProvider"
             ]
         }
     }
