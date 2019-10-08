@@ -1,0 +1,35 @@
+{
+    "name": "longmancode/overwatch",
+    "description": "A dashboard for all things Temple",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Steve Stewart",
+            "email": "steve.stewart2612@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.4.0",
+        "illuminate/support": ">=5.0",
+        "illuminate/view": ">=5.0",
+        "laravelcollective/html": "^5.8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Longmancode\\OverWatch\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Longmancode\\OverWatch\\Test\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Longmancode\\OverWatch\\OverWatchServiceProvider"
+            ]
+        }
+    }
+}

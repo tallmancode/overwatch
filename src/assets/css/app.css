@@ -1,0 +1,469 @@
+* {
+  box-sizing: border-box;
+}
+a {
+  cursor: pointer;
+}
+img {
+  max-width: 100%;
+}
+html,
+body {
+  background-color: #f9f9f9 !important;
+  height: 100vh;
+  margin: 0;
+  font-size: 14px!important;
+}
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+.flex-middle {
+  align-items: center;
+}
+.main {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.main.expanded .sidebar-wrap {
+  overflow: hidden!important;
+  width: 60px;
+}
+.sidebar-wrap {
+  height: 100%;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  z-index: 9;
+  transition: 0.3s;
+  background: #252526;
+  /* Old browsers */
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, #252526 0%, #222223 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#252526', endColorstr='#222223', GradientType=1);
+  /* IE6-9 fallback on horizontal gradient */
+  box-shadow: 5px 0 5px -2px #888;
+}
+.sidebar-wrap .logo-container {
+  background-color: #8764b8;
+  padding: 8px 15px;
+  text-align: center;
+}
+.sidebar-wrap .logo-container img {
+  max-height: 40px;
+}
+.sidebar-wrap .links-wrap {
+  flex-grow: 1;
+}
+.sidebar-wrap ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.sidebar-wrap ul li {
+  border-bottom: 1px solid #2b2b2b;
+}
+.sidebar-wrap ul li:first-child {
+  border-top: 1px solid #2b2b2b;
+}
+.sidebar-wrap ul li:last-child {
+  border-bottom: none;
+}
+.sidebar-wrap ul li .nav-link {
+  display: block;
+  white-space: nowrap;
+  padding: 8px 10px;
+  width: 100%;
+  align-items: center;
+  font-size: 18px;
+  color: #76838f;
+}
+.sidebar-wrap ul li .nav-link i {
+  font-size: 20px;
+  margin-right: 10px;
+  display: inline-block;
+  width: 38px;
+  text-align: center;
+}
+.sidebar-wrap ul li .nav-link span {
+  display: inline-block;
+}
+.sidebar-wrap ul li .nav-link:hover {
+  background-color: #2a363b;
+}
+.sidebar-wrap ul li .nav-link.toggle:after {
+  font-family: 'icomoon';
+  content: "\E90C";
+  position: absolute;
+  right: 1em;
+  transform: rotate(90deg);
+}
+.sidebar-wrap ul li .nav-link.toggle:hover {
+  background-color: #8764b8;
+}
+.sidebar-wrap ul li .dropdown-element {
+  height: 0;
+  overflow: hidden;
+  transition: 0.3s;
+}
+.sidebar-wrap #user-nav img {
+  max-width: 40px;
+  border-radius: 50%;
+}
+.sidebar-wrap #user-nav h4 {
+  margin: 0;
+  padding-left: 15px;
+  font-size: 18px;
+  font-weight: 300;
+  display: inline-block;
+}
+.main-panel {
+  height: 100vh;
+  overflow: auto;
+  flex-grow: 1;
+}
+.main-panel .content {
+  padding: 100px 20px 20px 20px;
+  height: 100%;
+}
+.main-panel .content .page-title h1 {
+  font-size: 18px;
+}
+.main-panel .content .page-controls .btn {
+  color: #fff;
+}
+.main-panel .panel {
+  margin-bottom: 22px;
+  background-color: #fff;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  height: auto;
+}
+.main-panel .panel .panel-body {
+  padding: 30px 20px 20px;
+  overflow: hidden;
+}
+.main-panel .panel .panel-body .row > [class*=col-] {
+  margin-bottom: 25px;
+}
+.main-panel .panel .panel-body .table > thead > tr > th {
+  border-color: #eaeaea;
+  background: #f8fafc;
+}
+.main-panel .panel .panel-body .table > tbody > tr > td {
+  border-bottom: 1px solid #dde2e7;
+}
+.panel.widget.bgimage {
+  background-size: cover;
+  background-position: 50%;
+  position: relative;
+}
+.panel.widget.center {
+  text-align: center;
+}
+.panel.widget {
+  padding: 30px;
+  border: 0;
+  border-radius: 3px;
+  flex: 1;
+  margin: 10px;
+}
+.panel.widget .dimmer {
+  background: rgba(45, 53, 61, 0.5);
+  background: linear-gradient(135deg, rgba(45, 53, 61, 0.79), rgba(45, 53, 61, 0.5));
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#c92d353d", endColorstr="#802d353d", GradientType=1);
+  opacity: 1;
+  transition: all 0.3s ease;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+}
+.panel.widget .panel-content {
+  z-index: 7;
+  position: relative;
+  color: #fff;
+}
+/*
+*
+*Breadcrumbs
+*
+*/
+.breadcrumbs {
+  padding: 15px 20px;
+  background-color: rgba(250, 250, 250, 0.8);
+  position: fixed;
+  width: calc(100% - 200px);
+  z-index: 8;
+}
+.breadcrumbs::after {
+  content: "";
+  border-bottom: 1px solid #e2e2e2;
+  clear: both;
+  display: block;
+  height: 1px;
+  width: 100%;
+}
+.breadcrumbs .hamburger {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  cursor: pointer;
+  opacity: 1;
+  padding: 28px 30px 28px 20px;
+  margin-right: 0;
+}
+.breadcrumbs .hamburger .hamburger-inner {
+  width: 15px;
+  height: 2px;
+  background: #76838f;
+  display: block;
+  border-radius: 10px;
+  top: 50%;
+  left: 50%;
+  margin-left: -10px;
+  margin-top: -1px;
+  position: absolute;
+  transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.breadcrumbs .hamburger .hamburger-inner:after,
+.breadcrumbs .hamburger .hamburger-inner:before {
+  height: 2px;
+  background: #76838f;
+  display: block;
+  border-radius: 10px;
+  position: absolute;
+  content: "";
+  transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.breadcrumbs ol {
+  list-style: none;
+  display: inline-block;
+  margin: 0;
+  padding: 0 10px;
+  vertical-align: middle;
+  background-color: #fff;
+  border-radius: 12px;
+}
+.breadcrumbs ol li {
+  display: inline-block;
+}
+.breadcrumbs ol li + li:before {
+  padding: 0 5px;
+  font-family: 'icomoon';
+  color: #ccc;
+  content: "\E90B";
+}
+/*
+*
+*form components
+*
+*/
+/*
+*
+*Card components
+*
+*/
+.card .card-header {
+  padding: 0.6rem 1.25rem;
+}
+.card .card-header.bg h4 {
+  color: #fff;
+  font-size: 1.2rem;
+  margin-bottom: 0;
+  font-weight: 400;
+}
+.card .card-body .form-group.row {
+  margin-right: 0;
+}
+.nav.nav-tabs {
+  float: left;
+  display: block;
+  border-bottom: 0;
+  border: 0;
+  background: #252526;
+  /* Old browsers */
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, #252526 0%, #222223 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#252526', endColorstr='#222223', GradientType=1);
+  /* IE6-9 fallback on horizontal gradient */
+}
+.nav-tabs .nav-link {
+  border: 0;
+  color: #76838f;
+  font-size: 18px;
+  border-radius: 0;
+}
+.nav-tabs .nav-link.active {
+  color: #495057;
+  border: 0;
+}
+.tab-content {
+  width: 100%;
+  padding: 30px 20px 20px;
+}
+.tab-content > .active {
+  display: block;
+  min-height: 165px;
+}
+/*
+*
+*pseduo elements
+*
+*/
+.chevron {
+  font-family: 'icomoon';
+  content: "\E90C";
+  position: absolute;
+  right: 1em;
+  transform: rotate(90deg);
+}
+.hamburger-inner:before {
+  width: 20px;
+  top: -5px;
+}
+.hamburger-inner:after {
+  width: 10px;
+  bottom: -5px;
+}
+.hamburger.is-active .hamburger-inner {
+  width: 20px;
+}
+.hamburger.is-active .hamburger-inner:after {
+  width: 20px;
+  transform: translate3d(-5px, -1px, 0) rotate(45deg) scaleX(0.5);
+}
+.hamburger.is-active .hamburger-inner:before {
+  width: 20px;
+  transform: translate3d(-5px, 1px, 0) rotate(-45deg) scaleX(0.5);
+}
+.btn-link,
+.btn-link:active,
+.btn-link:focus,
+.btn-link:hover {
+  border-color: transparent;
+  border-radius: 0;
+}
+.btn-link,
+.btn-link.active,
+.btn-link:active,
+.btn-link[disabled],
+fieldset[disabled] .btn-link {
+  background-color: transparent;
+  box-shadow: none;
+}
+/*
+*
+*container widths
+*
+*/
+/*
+*
+*Colour templates
+*
+*/
+.darkMode-gradient {
+  background: #252526;
+  /* Old browsers */
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, #252526 0%, #222223 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#252526', endColorstr='#222223', GradientType=1);
+  /* IE6-9 fallback on horizontal gradient */
+}
+.blue-gradient,
+.bg-info {
+  background: #3b70de;
+  /* Old browsers */
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, #3b70de 0%, #409ced 40%, #88cffc 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3b70de', endColorstr='#88cffc', GradientType=1);
+  /* IE6-9 fallback on horizontal gradient */
+}
+.bg-success {
+  background: #28a745;
+  /* Old browsers */
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, #28a745 0%, #49c62d 40%, #67d384 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#28a745', endColorstr='#67d384', GradientType=1);
+  /* IE6-9 fallback on horizontal gradient */
+}
+.bg-danger,
+.btn-danger {
+  background: #b00020;
+  /* Old browsers */
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, #b00020 0%, #e20003 50%, #ff0010 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#b00020', endColorstr='#ff0010', GradientType=1);
+  /* IE6-9 fallback on horizontal gradient */
+}
+.right-side-box-shadow {
+  box-shadow: 5px 0 5px -2px #888;
+}
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 45px;
+  height: 23px;
+}
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 15px;
+  width: 15px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+}
+input:checked + .slider {
+  background-color: #2196F3;
+}
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+input:checked + .slider:before {
+  transform: translateX(22px);
+}
+/* Rounded sliders */
+.slider.round {
+  border-radius: 18px;
+}
+.slider.round:before {
+  border-radius: 50%;
+}
